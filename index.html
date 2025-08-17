@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teamR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>teamR</h1>
+      <p class="subtitle">Prepare for trouble</p>
+    </header>
+
+    <div class="mode-toggle">
+      <button id="assignModeBtn" class="mode-btn active">assignR</button>
+      <button id="teamModeBtn" class="mode-btn">teamR</button>
+    </div>
+
+    <div class="instructions">
+      <h3>Instructions</h3>
+      <p><b>assignR</b> Generate trainers and give them Rocket codes.</p>
+      <p><b>teamR:</b> Divide trainers into squads.</p>
+    </div>
+
+    <div class="control-panel">
+      <div class="panel-group">
+        <label for="playerCount">Number of Trainers:</label>
+        <input type="number" id="playerCount" min="1" max="100" value="6">
+      </div>
+
+      <div id="assignControls" class="panel-group">
+        <label for="roleType">Assign Type:</label>
+        <select id="roleType">
+          <option value="numeric">Numeric (001, 002, ...)</option>
+          <option value="alphabetic">Alphabetic (A, B, C...)</option>
+        </select>
+      </div>
+
+      <div id="teamControls" class="panel-group hidden">
+        <label for="teamCount">Number of Squads:</label>
+        <input type="number" id="teamCount" min="1" max="20" value="3">
+        
+        <label for="skipList">Skip Trainers (comma separated):</label>
+        <input type="text" id="skipList" placeholder="e.g. Trainer 5, Trainer 9">
+        
+        <label for="lockedGroup">Locked Group (comma separated):</label>
+        <input type="text" id="lockedGroup" placeholder="e.g. Trainer 3, Trainer 7">
+        
+        <label for="lockedTeams">Teams for Locked Group:</label>
+        <input type="number" id="lockedTeams" min="1" value="1">
+    </div>
+
+      <div class="panel-group">
+        <button id="generateBtn">Generate Trainers</button>
+        <button id="actionBtn" disabled>Assign</button>
+      </div>
+    </div>
+
+    <div id="teamDisplay" class="team-display hidden">
+  <h2>Squad Assignments</h2>
+  <div class="teams-container" id="teamsContainer">
+    </div>
+</div>
+
+<div class="players-container" id="playersContainer">
+  </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

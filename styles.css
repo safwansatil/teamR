@@ -1,0 +1,145 @@
+/* Reset */
+body, h1, h2, h3, p, label {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout */
+body {
+  background-color: #E8F1F1;
+  color: #30333C;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  border: 2px solid #30333C;
+  padding: 15px;
+  background: #FCEEC0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  border-bottom: 2px solid #30333C;
+  margin-bottom: 15px;
+}
+header h1 {
+  color: #e43931;
+  font-size: 28px;
+}
+.subtitle {
+  font-size: 14px;
+  color: #7F7FBC;
+}
+
+/* Instructions */
+.instructions {
+  border: 1px solid #30333C;
+  background: #FFF;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+/* Controls */
+.control-panel {
+  border: 1px solid #30333C;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.panel-group {
+  margin-bottom: 10px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input, select, button {
+  padding: 5px;
+  border: 1px solid #30333C;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Buttons */
+button {
+  background: #E94E60;
+  color: #FFF;
+  cursor: pointer;
+}
+button:disabled {
+  background: #CCC;
+  cursor: not-allowed;
+}
+.mode-toggle {
+  text-align: center;
+  margin: 10px 0;
+}
+.mode-btn {
+  background: #40BCEB;
+  color: #FFF;
+  border: 1px solid #30333C;
+  padding: 5px 10px;
+  margin: 0 2px;
+}
+.mode-btn.active {
+  background: #B23D80;
+}
+
+/* Players */
+.players-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.player-card {
+  border: 1px solid #30333C;
+  padding: 10px;
+  background: #FFF;
+}
+.player-card h3 {
+  font-size: 16px;
+  border-bottom: 1px solid #30333C;
+  margin-bottom: 5px;
+}
+.assigned-role {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #B23D80;
+}
+
+/* Teams */
+.team-display {
+  margin-top: 15px;
+  border: 1px solid #30333C;
+  padding: 10px;
+  background: #FFF;
+}
+.teams-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.team-card {
+  border: 1px solid #30333C;
+  padding: 10px;
+}
+.team-card h3 {
+  font-size: 16px;
+  color: #E94E60;
+  border-bottom: 1px solid #30333C;
+  margin-bottom: 5px;
+}
+.team-members {
+  list-style: square inside;
+  font-size: 14px;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
